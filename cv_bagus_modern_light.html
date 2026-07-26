@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Bagus Fajar Herlani - IT Support & Network Automation Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        tech: {
+                            50: '#F0F9FF',
+                            100: '#E0F2FE',
+                            500: '#0EA5E9',
+                            600: '#0284C7',
+                            700: '#0369A1',
+                            900: '#0C4A6E',
+                            accent: '#6366F1', // Indigo Automation
+                            ai: '#06B6D4',     // Cyan AI
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                color: #0f172a !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 0 !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .cv-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                border: none !important;
+                border-radius: 0 !important;
+            }
+            .page-break {
+                page-break-inside: avoid;
+            }
+        }
+        
+        .ai-grid-pattern {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(rgba(14, 165, 233, 0.15) 1.2px, transparent 1.2px), 
+                radial-gradient(rgba(99, 102, 241, 0.1) 1.2px, #f8fafc 1.2px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+        }
+
+        .ai-glow-card {
+            box-shadow: 0 4px 20px -2px rgba(14, 165, 233, 0.08);
+        }
+
+        .border-gradient-tech {
+            border-image: linear-gradient(to right, #0ea5e9, #6366f1) 1;
+        }
+    </style>
+</head>
+<body class="ai-grid-pattern text-slate-800 font-sans min-h-screen py-6 px-4 sm:px-6 lg:px-8">
+
+    <!-- Print / Action Bar -->
+    <div class="max-w-5xl mx-auto mb-5 flex justify-between items-center no-print bg-white/80 backdrop-blur-md p-3.5 rounded-xl border border-sky-100 shadow-sm">
+        <div class="flex items-center space-x-2.5 text-sky-700 font-mono text-xs sm:text-sm font-semibold">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+            </span>
+            <span>AI & Automation Engineer Resume // Light Mode</span>
+        </div>
+        <button onclick="window.print()" class="bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-600 hover:to-indigo-700 text-white font-bold py-2 px-5 rounded-lg transition duration-200 flex items-center space-x-2 shadow-md shadow-sky-500/20 text-sm">
+            <i class="fa-solid fa-print"></i>
+            <span>Cetak / Simpan PDF</span>
+        </button>
+    </div>
+<!-- CV Main Container (A4 Printable Format) -->
+    <div class="cv-container max-w-5xl mx-auto bg-white border border-sky-100 rounded-2xl overflow-hidden shadow-xl ai-glow-card">
+        
+        <!-- Top Tech Gradient Line -->
+        <div class="h-2.5 w-full bg-gradient-to-r from-sky-400 via-cyan-500 to-indigo-600"></div>
+
+        <!-- Header Section -->
+        <div class="p-6 md:p-8 bg-gradient-to-b from-sky-50/70 via-white to-white border-b border-sky-100 relative overflow-hidden">
+            <!-- Decorative AI Circuit Overlay -->
+            <div class="absolute -right-6 -top-6 opacity-10 pointer-events-none hidden md:block">
+                <svg width="280" height="280" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40 100H80L100 60L120 140L140 100H180" stroke="#0ea5e9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="40" cy="100" r="8" fill="#0ea5e9"/>
+                    <circle cx="180" cy="100" r="8" fill="#6366f1"/>
+                    <circle cx="100" cy="60" r="6" fill="#06b6d4"/>
+                    <circle cx="120" cy="140" r="6" fill="#6366f1"/>
+                </svg>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6 relative z-10">
+                
+                <!-- Profile Image Frame -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-300"></div>
+                    <div class="relative w-32 h-40 rounded-xl overflow-hidden border-2 border-white shadow-md bg-sky-100">
+                        <!-- Menggunakan foto profil dari dokumen -->
+                        <img src="images/profile.jpg" 
+                             alt="Bagus Fajar Herlani" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://via.placeholder.com/150x180?text=Bagus+Fajar'">
+                    </div>
+                    <div class="absolute -bottom-2 -right-2 bg-sky-600 text-white px-2 py-0.5 rounded-full text-[9px] font-mono font-bold flex items-center gap-1 shadow-sm">
+                        <i class="fa-solid fa-bolt text-amber-300"></i> AI-READY
+                    </div>
+                </div>
+
+                <!-- Header Information -->
+                <div class="flex-1 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100/80 border border-sky-200 text-sky-800 text-xs font-mono font-semibold mb-2">
+                        <i class="fa-solid fa-microchip text-sky-600"></i>
+                        <span>IT INFRASTRUCTURE & NETWORK AUTOMATION</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        BAGUS FAJAR HERLANI
+                    </h1>
+                    
+                    <p class="text-sky-700 font-semibold text-base sm:text-lg mt-0.5 flex items-center justify-center md:justify-start gap-2">
+                        <span>IT Support & Network Engineer</span>
+                        <span class="text-sky-300">•</span>
+                        <span class="text-indigo-600 font-mono text-sm">12+ Years Exp.</span>
+                    </p>
+
+                    <!-- Contact Bar Grid -->
+                    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs font-mono">
+                        <a href="mailto:bagusfajarh@gmail.com" class="flex items-center gap-2 bg-white hover:bg-sky-50 px-3 py-2 rounded-lg border border-sky-200/80 text-slate-700 shadow-sm transition">
+<i class="fa-solid fa-envelope text-sky-500"></i>
+                            <span class="truncate">bagusfajarh@gmail.com</span>
+                        </a>
+                        <a href="https://wa.me/6281395537887" class="flex items-center gap-2 bg-white hover:bg-sky-50 px-3 py-2 rounded-lg border border-sky-200/80 text-slate-700 shadow-sm transition">
+                            <i class="fa-brands fa-whatsapp text-emerald-500 text-sm"></i>
+                            <span>0813-9553-7887</span>
+                        </a>
+                        <div class="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-sky-200/80 text-slate-700 shadow-sm">
+                            <i class="fa-solid fa-location-dot text-rose-500"></i>
+                            <span>Cirebon, Jawa Barat</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 2 Columns Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-sky-100">
+            
+            <!-- LEFT COLUMN (Info, Tech Stack, AI Automation) - 4 Cols -->
+            <div class="lg:col-span-4 p-6 bg-slate-50/60 space-y-6">
+                
+                <!-- Profil Ringkas -->
+                <div class="space-y-2">
+                    <h2 class="text-xs font-mono font-bold tracking-wider text-sky-800 uppercase flex items-center gap-1.5">
+                        <i class="fa-solid fa-terminal text-sky-500"></i> Profil Ringkas
+                    </h2>
+                    <p class="text-xs text-slate-600 leading-relaxed bg-white p-3.5 rounded-xl border border-sky-100 shadow-sm">
+                        IT Support & Network Engineer berpengalaman <strong>12+ tahun</strong>. Saat ini mengelola seluruh infrastruktur jaringan & IT di Complete Selular Grup Cirebon. Ahli mengombinasikan routing <strong>Mikrotik</strong> dengan <strong>automasi Python & n8n</strong> serta integrasi <strong>AI Gateway</strong> untuk efisiensi sistem.
+                    </p>
+                </div>
+
+                <!-- Keahlian Inti & Tech Stack -->
+                <div class="space-y-3">
+                    <h2 class="text-xs font-mono font-bold tracking-wider text-sky-800 uppercase flex items-center gap-1.5">
+                        <i class="fa-solid fa-layer-group text-sky-500"></i> Keahlian & Tech Stack
+                    </h2>
+
+                    <!-- Skill Block 1: Jaringan -->
+                    <div class="bg-white p-3 rounded-xl border border-sky-100 shadow-sm space-y-2">
+                        <div class="text-xs font-bold text-sky-900 flex items-center justify-between">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-network-wired text-sky-500"></i> JARINGAN & MIKROTIK</span>
+                            <span class="text-[10px] font-mono bg-sky-100 text-sky-700 px-1.5 py-0.5 rounded">EXPERT</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-sky-50 text-sky-800 rounded text-[10px] font-mono border border-sky-200">RouterOS</span>
+                            <span class="px-2 py-0.5 bg-sky-50 text-sky-800 rounded text-[10px] font-mono border border-sky-200">TCP/IP</span>
+                            <span class="px-2 py-0.5 bg-sky-50 text-sky-800 rounded text-[10px] font-mono border border-sky-200">VLAN</span>
+                            <span class="px-2 py-0.5 bg-sky-50 text-sky-800 rounded text-[10px] font-mono border border-sky-200">NAT & DHCP</span>
+                            <span class="px-2 py-0.5 bg-sky-50 text-sky-800 rounded text-[10px] font-mono border border-sky-200">VPN & BWM</span>
+                            <span class="px-2 py-0.5 bg-sky-50 text-sky-800 rounded text-[10px] font-mono border border-sky-200">SSH & Monitoring</span>
+                        </div>
+                    </div>
+<!-- Skill Block 2: Automasi & AI -->
+                    <div class="bg-gradient-to-br from-indigo-50/50 to-white p-3 rounded-xl border border-indigo-200/80 shadow-sm space-y-2">
+                        <div class="text-xs font-bold text-indigo-900 flex items-center justify-between">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-robot text-indigo-600"></i> AUTOMASI & INTEGRASI AI</span>
+                            <span class="text-[10px] font-mono bg-indigo-100 text-indigo-700 px-1.5 py-0.5 rounded">FEATURED</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-indigo-100/70 text-indigo-900 font-semibold rounded text-[10px] font-mono border border-indigo-200">n8n Workflow</span>
+                            <span class="px-2 py-0.5 bg-indigo-100/70 text-indigo-900 font-semibold rounded text-[10px] font-mono border border-indigo-200">Python Automation</span>
+                            <span class="px-2 py-0.5 bg-indigo-50 text-indigo-800 rounded text-[10px] font-mono border border-indigo-200">REST API & Webhooks</span>
+                            <span class="px-2 py-0.5 bg-indigo-50 text-indigo-800 rounded text-[10px] font-mono border border-indigo-200">AI Gateway (9Router)</span>
+                            <span class="px-2 py-0.5 bg-indigo-50 text-indigo-800 rounded text-[10px] font-mono border border-indigo-200">Bash & Cron Job</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Block 3: IT Support & Server -->
+                    <div class="bg-white p-3 rounded-xl border border-sky-100 shadow-sm space-y-2">
+                        <div class="text-xs font-bold text-sky-900 flex items-center gap-1.5">
+                            <i class="fa-solid fa-server text-sky-500"></i> SERVER, STORAGE & SUPPORT
+                        </div>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded text-[10px] font-mono border border-slate-200">Helpdesk L1/L2</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded text-[10px] font-mono border border-slate-200">TrueNAS</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded text-[10px] font-mono border border-slate-200">Cloud Storage Lokal</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded text-[10px] font-mono border border-slate-200">Docker</span>
+                            <span class="px-2 py-0.5 bg-slate-100 text-slate-700 rounded text-[10px] font-mono border border-slate-200">POS & Hardware</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Block 4: Tools -->
+                    <div class="bg-white p-3 rounded-xl border border-sky-100 shadow-sm space-y-2">
+                        <div class="text-xs font-bold text-sky-900 flex items-center gap-1.5">
+                            <i class="fa-solid fa-screwdriver-wrench text-sky-500"></i> SOFTWARE & TOOLS
+                        </div>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-sky-50 text-sky-800 rounded text-[10px] font-mono border border-sky-200">Linux OS</span>
+                            <span class="px-2 py-0.5 bg-sky-50 text-sky-800 rounded text-[10px] font-mono border border-sky-200">Git / GitHub</span>
+                            <span class="px-2 py-0.5 bg-sky-50 text-sky-800 rounded text-[10px] font-mono border border-sky-200">Cloudflare AI</span>
+                            <span class="px-2 py-0.5 bg-sky-50 text-sky-800 rounded text-[10px] font-mono border border-sky-200">MS Office</span>
+                        </div>
+                    </div>
+                </div>
+<!-- Data Pribadi & Bahasa -->
+                <div class="space-y-2 pt-2 border-t border-sky-200/60">
+                    <h2 class="text-xs font-mono font-bold tracking-wider text-sky-800 uppercase flex items-center gap-1.5">
+                        <i class="fa-solid fa-address-card text-sky-500"></i> Data Pribadi
+                    </h2>
+                    <div class="bg-white p-3.5 rounded-xl border border-sky-100 shadow-sm text-xs space-y-1.5 font-mono">
+                        <div class="flex justify-between"><span class="text-slate-400">TTL:</span> <span class="text-slate-800 font-medium">Cirebon, 09 Jan 1995</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Usia:</span> <span class="text-slate-800 font-medium">31 Tahun</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Status:</span> <span class="text-slate-800 font-medium">Menikah</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">SIM / Transport:</span> <span class="text-slate-800 font-medium">Aktif / Motor</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Bahasa:</span> <span class="text-slate-800 font-medium">Indo (Aktif), Ing (Teknis)</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN (Experience, Education, Projects) - 8 Cols -->
+            <div class="lg:col-span-8 p-6 md:p-8 space-y-7 bg-white">
+                
+                <!-- Pengalaman Kerja -->
+                <div class="space-y-5">
+                    <div class="flex items-center justify-between pb-2 border-b-2 border-sky-500">
+                        <h2 class="text-base font-extrabold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase text-sky-600"></i> Pengalaman Kerja
+                        </h2>
+                        <span class="text-xs font-mono font-bold text-sky-700 bg-sky-100 px-2.5 py-1 rounded-full border border-sky-200">
+                            12+ TAHUN TOTAL
+                        </span>
+                    </div>
+
+                    <!-- Timeline Jobs -->
+                    <div class="space-y-5 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-gradient-to-b before:from-sky-400 before:via-indigo-300 before:to-slate-200">
+                        
+                        <!-- Job 1 (Current) -->
+                        <div class="relative pl-8 group">
+                            <!-- Timeline Dot -->
+                            <div class="absolute left-1.5 top-1.5 w-4 h-4 rounded-full bg-sky-500 ring-4 ring-sky-100"></div>
+                            
+                            <div class="bg-gradient-to-br from-sky-50/40 to-white p-4 rounded-xl border border-sky-200/80 shadow-sm hover:border-sky-300 transition">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
+                                    <h3 class="text-sm font-bold text-sky-900">
+                                        IT Support Networking & Helpdesk
+                                    </h3>
+                                    <span class="text-[11px] font-mono font-semibold text-sky-800 bg-sky-100 px-2.5 py-0.5 rounded-full border border-sky-200 w-fit">
+                                        2021 — Sekarang
+                                    </span>
+                                </div>
+                                <div class="text-xs font-semibold text-slate-500 mb-3 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-building text-sky-500"></i> Complete Selular Grup — Cirebon
+                                </div>
+<!-- Highlights & Automation Badges -->
+                                <ul class="text-xs text-slate-700 space-y-2 list-disc list-inside leading-relaxed">
+                                    <li>
+                                        <strong class="text-slate-900">Infrastruktur Jaringan Mikrotik:</strong> Mengelola routing, firewall, VPN, dan Bandwidth Management (BWM) secara terpusat untuk kelancaran operasional toko/kantor.
+                                    </li>
+                                    <li>
+                                        <strong class="text-slate-900">Automasi n8n & Python:</strong> Membangun skrip backup otomatis router Mikrotik yang terintegrasi langsung via webhook dan notifikasi.
+                                    </li>
+                                    <li>
+                                        <strong class="text-slate-900">Integrasi AI Gateway (9Router):</strong> Konfigurasi dan pengelolaan gateway AI untuk pemrosesan data, integrasi API, dan webhook internal perusahaan.
+                                    </li>
+                                    <li>
+                                        <strong class="text-slate-900">IT Helpdesk L1/L2:</strong> Penanganan cepat masalah hardware, software, sistem jaringan toko, serta pemeliharaan server lokal.
+                                    </li>
+                                </ul>
+
+                                <!-- Pipeline Visual Feature Tags -->
+                                <div class="mt-3 pt-2.5 border-t border-sky-100 flex flex-wrap items-center gap-1.5 text-[10px] font-mono">
+                                    <span class="text-slate-400 font-bold">PIPELINE:</span>
+                                    <span class="bg-sky-100/80 text-sky-800 px-2 py-0.5 rounded border border-sky-200"><i class="fa-solid fa-code-fork mr-1"></i>n8n Workflow</span>
+                                    <span class="bg-indigo-100/80 text-indigo-800 px-2 py-0.5 rounded border border-indigo-200"><i class="fa-solid fa-brain mr-1"></i>9Router AI</span>
+                                    <span class="bg-cyan-100/80 text-cyan-800 px-2 py-0.5 rounded border border-cyan-200"><i class="fa-solid fa-network-wired mr-1"></i>RouterOS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Job 2 -->
+                        <div class="relative pl-8 group">
+                            <div class="absolute left-1.5 top-1.5 w-4 h-4 rounded-full bg-slate-300 ring-4 ring-slate-100"></div>
+                            
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:border-slate-300 transition">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                                    <h3 class="text-sm font-bold text-slate-800">
+                                        Supervisor Resto & Operational IT
+                                    </h3>
+                                    <span class="text-[11px] font-mono text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200 w-fit">
+                                        2015 — 2021
+                                    </span>
+                                </div>
+                                <div class="text-xs font-semibold text-slate-500 mb-2 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-utensils text-slate-400"></i> Resto Cheng Ho Waterland — Cirebon
+                                </div>
+                                <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside leading-relaxed">
+                                    <li>Bertanggung jawab penuh atas operasional harian restoran, manajemen tim, dan efisiensi antar divisi.</li>
+<li>Pengelolaan dan maintenance infrastruktur POS (Point of Sales) serta jaringan IT restoran.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Job 3 -->
+                        <div class="relative pl-8 group">
+                            <div class="absolute left-1.5 top-1.5 w-4 h-4 rounded-full bg-slate-300 ring-4 ring-slate-100"></div>
+                            
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:border-slate-300 transition">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                                    <h3 class="text-sm font-bold text-slate-800">
+                                        IT Support
+                                    </h3>
+                                    <span class="text-[11px] font-mono text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200 w-fit">
+                                        2013 — 2015
+                                    </span>
+                                </div>
+                                <div class="text-xs font-semibold text-slate-500 mb-2 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-industry text-slate-400"></i> PT Dekatama Centra — Cirebon
+                                </div>
+                                <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside leading-relaxed">
+                                    <li>Dukungan teknis & pemeliharaan berkala untuk hardware, software, dan jaringan di lingkungan pabrik.</li>
+                                    <li>Setup unit komputer baru, printer kasir, dan instalasi perangkat pendukung sistem bisnis.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Pendidikan Formal -->
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between pb-1.5 border-b-2 border-sky-500">
+                        <h2 class="text-base font-extrabold text-slate-900 uppercase tracking-wide flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-sky-600"></i> Pendidikan Formal
+                        </h2>
+                    </div>
+
+                    <div class="bg-sky-50/50 p-3.5 rounded-xl border border-sky-100 flex items-center justify-between shadow-sm">
+                        <div>
+                            <h3 class="text-xs sm:text-sm font-bold text-slate-900">SMK YADIKA (Yayasan Abdi Karya) Cirebon</h3>
+                            <p class="text-xs font-mono font-semibold text-sky-700 mt-0.5">Jurusan: Teknik Komputer dan Jaringan (TKJ)</p>
+                        </div>
+                        <span class="text-xs font-mono font-bold text-slate-700 bg-white px-3 py-1 rounded-lg border border-sky-200">
+                            Lulus 2013
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Referensi & Footer Stamp -->
+                <div class="pt-3 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-slate-500 gap-2">
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-certificate text-sky-600"></i>
+                        <span>REFERENSI: Tersedia atas permintaan</span>
+                    </div>
+                    <div class="text-slate-400 text-[10px]">
+                        CV Bagus Fajar Herlani • Cirebon, 2026
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
